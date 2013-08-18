@@ -1,0 +1,227 @@
+/* Override some defaults */
+body {
+  padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+}
+p{
+	margin:2px auto;
+}
+h1{
+	font-size: 1.9em;
+	line-height: 2em;
+}
+h2{
+	font-size: 1.8em;
+	line-height: 1.9em;
+}
+h3{
+	font-size: 1.4em;
+	line-height: 1.5em;
+}
+h4{
+	font-size: 1.3em;
+	line-height: 1.4em;
+}
+h5{
+	font-size: 1.1em;
+	line-height: 1.2em;
+}
+h6{
+	font-size: 1em;
+	line-height: 1.1em;
+}
+/*global*/
+.center{
+	text-align: center;
+}
+.card{
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.page-header {
+	padding-bottom: 9px;
+	margin: 20px 0 20px;
+	border-bottom: 1px solid #eeeeee;
+}
+.table_img{
+	text-align: center;
+	margin: 5px auto;
+	padding: 6px;
+    border: 4px solid #dddddd;
+    max-width: 90%;
+}
+.table_img img{
+	max-width: 88%;
+}
+div .img_title{
+	margin-top: 1.5em;
+	color: #333333
+}
+/*layout*/
+.main {
+  width: 100%; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+}
+
+.container {
+  width: 75%; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+  margin-left: 25%;
+}
+
+.widgets {
+	display: block;
+	display: inline;
+	float: left;
+	width: 16.666666666666668%;
+	margin-left: 4.166666666666667%;
+	margin-right: 4.166666666666667%;
+	padding-top: 3em;
+}
+.widget{
+	margin-top: 0.5em;
+	padding: 1em;
+	width: 100%;
+	background-color: #E2E1E2
+}
+.widget h4{
+	margin: 0;
+	padding: 0;
+}
+.widget img.bio-photo{
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+}
+
+/* The white background content wrapper */
+.content {
+	display: inline;
+	float: left;
+	width: 50%;
+	margin-left: 0%;
+	margin-right: 0%;
+}
+
+
+/* tag_box ======================================================== */
+
+.tag_box {
+	list-style:none;
+	margin:0;
+	overflow:hidden;
+}
+.tag_box li {
+	line-height:28px;
+}
+.tag_box.inline li {
+	float:left;
+}
+.tag_box a {
+	padding: 3px 6px;
+	margin: 2px;
+	border-radius: 3px;
+}
+.tag_box a span{
+	vertical-align:super;
+	font-size:0.8em;
+}
+.tag_box a.active {
+	border:1px solid #4C964D;
+}
+/*custerm======================================================== */
+/*img*/
+
+/*list with title*/
+.title_list{
+	padding: 5px;
+}
+.title_list .list_title{
+	font-size: 1.4em;
+}
+.title_list ul{
+	margin: 10px 25px;
+}
+/*bold title with ':' in the end*/
+.bold_title{
+	font-size: 1.4em;
+	line-height: 1.6em;
+	font-weight: bold;
+	margin-top: 0.6em;
+	margin-bottom: 0.3em;
+}
+footer{
+	margin: 0 auto;
+	width: 100%;
+	clear: both;
+	text-align: center;
+	margin-top: 1em;
+	padding-top: 2em;
+	padding-bottom: 3em;
+}
+
+/*absctract*/
+.blogcard{
+	padding: 6px;
+	border-bottom: 1px solid #dddddd;
+}
+.blogcard h1{
+	font-size: 17px;
+	line-height: 20px;
+}
+.blogcard .abstract{
+	padding: 0.2em;
+}
+.blogcard .abstract p{
+	margin: 0;
+	padding-bottom: 2px;
+	text-indent: 0;
+	font-size: 15px;
+	line-height: 21px;
+}
+.blogcard .info{
+	padding-top: 6px;
+}
+.blogcard span{
+	font-size: 1.1em;
+	color: green;
+	margin-right: 6px;
+}
+
+.poetry{
+	margin: 5px auto;
+	padding: 6px;
+	background-color:#E2E1E2;
+	width: 80%;
+}
+.poetry_title{
+	font-size: 1.5em;
+	font-weight: bold;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #aaaaaa;
+	text-align: center;
+}
+
+.poetry_body p{
+	padding: 10px;
+	font-size: 16px;
+	line-height: 18px;
+	color: #333333;
+}
+
+.tags ul,.tags li{
+	display: inline;
+}
+
+.post_info .item{
+	padding-right: 1em;
+}
+/*a{text-decoration:none;color:#343434;}a:visited{color:#4e4e4e;}
+a:hover{color:#1a1a1a;}
+a:focus{outline:thin dotted;color:#343434;}
+a:hover,a:active{outline:0;}*/
+.warnning {
+	color: red;
+	font-size: 2em;
+}
+
+
+
