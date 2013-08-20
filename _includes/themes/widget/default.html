@@ -12,23 +12,27 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/css/bootstrap/2.3.2/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="{{ ASSET_PATH }}/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/css/bootstrap/2.3.2/custom/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/css/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if IE 7]>
+      <link rel="stylesheet" href="{{ ASSET_PATH }}/css/font-awesome/3.2.1/css/font-awesome-ie7.min.css">
+    <![endif]-->
     <!-- <link href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/1.4.0/bootstrap.css" rel="stylesheet">-->
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
-  <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  -->
+
+    <link rel="shortcut icon" href="{{ ASSET_PATH }}/img/logo_16.png">
+    <link rel="shortcut icon" href="{{ ASSET_PATH }}/img/logo_32.png">
+    <link rel="shortcut icon" href="{{ ASSET_PATH }}/img/logo_57.png">
+    <link rel="apple-touch-icon" href="{{ ASSET_PATH }}/img/logo_57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ ASSET_PATH }}/img/logo_72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ ASSET_PATH }}/img/logo_114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ ASSET_PATH }}/img/logo_144.png">
   </head>
 
   <body>
-
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -44,15 +48,17 @@
       </div>
     </div>
 
-    <div class="main">
+    <div id="main">
       <div class="widgets">
 
-        <div class="widget card center">
-          <img src="{{ site.author.gravatar_link }}" class="bio-photo" alt="{{ site.author.name }}" width="100" height="100">
+        <div id ="author_info" class="widget card center">          
+          <img class="bio-photo" src="{{ ASSET_PATH }}/img/head_color.jpeg" width="100" height="100" alt="{{ site.author.name }}">
+          </noscript>
           <h4>{{ site.author.name }}</h4>
           <p>{{ site.author.description }}</p>
-          <p style="text-indent:0;"><a href="{{ site.author.google_plus }}" target="_blank"><i class="icon-google-plus"></i> Google+</a></p>          
-          <p style="text-indent:0;"><a href="http://twitter.com/{{ site.author.twitter }}" target="_blank"><i class="icon-twitter"></i> Twitter</a></p>
+          <p style="text-indent:0;"><a href="{{ site.author.renren }}" target="_blank"><i class="icon-renren"></i> RenRen</a></p>
+          <p style="text-indent:0;"><a href="{{ site.author.google_plus }}" target="_blank"><i class="icon-google-plus"></i> Google+</a></p>
+          <p style="text-indent:0;"><a href="{{ site.author.weibo }}" target="_blank"><i class="icon-weibo"></i> WeiBo</a></p>
           <p style="text-indent:0;"><a href="http://github.com/{{ site.author.github }}" target="_blank"><i class="icon-github"></i> Github</a></p>
         </div>
         <div class="widget card">
@@ -71,7 +77,7 @@
         </div>
       </div>
 
-      <div class="content">
+      <div id="content" class="content">
         {{ content }}
       </div>
 
@@ -81,9 +87,24 @@
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
       </footer>
-
     </div> <!-- /main -->
-
     {% include JB/analytics %}
+    {% if page.navi_list %}
+      {% include JB/navi_list %}
+    {% endif %}
+    {% if page.post_imgs[0] != null %}
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/jquery.lazyload.js"></script>
+      <script src="/assets/js/holder.js"></script>
+      <script type="text/javascript" charset="utf-8">
+        $(function() {          
+            $("img.lazy").show().lazyload({
+               effect      : "fadeIn",
+               skip_invisible:false,
+               failurelimit : 3
+            });
+        });
+      </script>
+    {% endif %}
   </body>
 </html>

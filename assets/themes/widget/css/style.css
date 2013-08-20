@@ -1,6 +1,7 @@
 /* Override some defaults */
 body {
   padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+  height:100%;
 }
 p{
 	margin:2px auto;
@@ -8,27 +9,35 @@ p{
 h1{
 	font-size: 1.9em;
 	line-height: 2em;
+	position:relative;
 }
 h2{
 	font-size: 1.8em;
 	line-height: 1.9em;
+	position:relative;
 }
 h3{
 	font-size: 1.4em;
 	line-height: 1.5em;
+	position:relative;
 }
 h4{
 	font-size: 1.3em;
 	line-height: 1.4em;
+	position:relative;
 }
 h5{
 	font-size: 1.1em;
 	line-height: 1.2em;
+	position:relative;
 }
 h6{
 	font-size: 1em;
 	line-height: 1.1em;
+	position:relative;
 }
+/*for navi_list*/
+h1 span,h2 span,h3 span,h4 span,h5 span,h6 span,#disqus_thread span{ position:absolute; top:-60px;}
 /*global*/
 .center{
 	text-align: center;
@@ -46,19 +55,19 @@ h6{
 .table_img{
 	text-align: center;
 	margin: 5px auto;
-	padding: 6px;
-    border: 4px solid #dddddd;
-    max-width: 90%;
+	padding: 2px;
+    border: 3px solid #dddddd;
+    max-width: 100%;
 }
 .table_img img{
-	max-width: 88%;
+	max-width: 100%;
 }
 div .img_title{
 	margin-top: 1.5em;
 	color: #333333
 }
 /*layout*/
-.main {
+#main {
   width: 100%; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
 }
 
@@ -75,7 +84,7 @@ div .img_title{
 	margin-left: 4.166666666666667%;
 	margin-right: 4.166666666666667%;
 	padding-top: 3em;
-}
+}/*padding-top: 3em;*/
 .widget{
 	margin-top: 0.5em;
 	padding: 1em;
@@ -91,7 +100,6 @@ div .img_title{
 	-moz-border-radius: 100px;
 	border-radius: 100px;
 }
-
 /* The white background content wrapper */
 .content {
 	display: inline;
@@ -100,7 +108,10 @@ div .img_title{
 	margin-left: 0%;
 	margin-right: 0%;
 }
-
+.content p,.abstract p{
+    font-size: 16px;
+    line-height: 22px;
+}
 
 /* tag_box ======================================================== */
 
@@ -131,14 +142,14 @@ div .img_title{
 /*img*/
 
 /*list with title*/
-.title_list{
-	padding: 5px;
-}
 .title_list .list_title{
 	font-size: 1.4em;
 }
 .title_list ul{
-	margin: 10px 25px;
+	margin: 10px;
+}
+.title_list ul li{
+	list-style-type: none;
 }
 /*bold title with ':' in the end*/
 .bold_title{
@@ -189,7 +200,6 @@ footer{
 .poetry{
 	margin: 5px auto;
 	padding: 6px;
-	background-color:#E2E1E2;
 	width: 80%;
 }
 .poetry_title{
@@ -203,7 +213,7 @@ footer{
 .poetry_body p{
 	padding: 10px;
 	font-size: 16px;
-	line-height: 18px;
+	line-height: 22px;
 	color: #333333;
 }
 
@@ -223,5 +233,37 @@ a:hover,a:active{outline:0;}*/
 	font-size: 2em;
 }
 
+/*content table*/
+.selection {
+	background-color: #dadada;
+	color: #343434;
+	text-shadow: none;
+}
+.navi_list{
+	display: block;
+	display: inline;
+	float: right;
+	position: fixed;
+	width: 16.666666666666668%;
+	margin-left: 4.166666666666667%;
+	margin-right: 4.166666666666667%;
+	padding-top: 3em;
+}
+/*.navi_list ul li{list-style-type:square;}*/
+.navi_list li>a{text-decoration:none;border-bottom:1px solid #b3b3b1;}
+.navi_list li>a:hover{text-decoration:none;border-bottom:1px solid #b3b3b1;}
+#author_info a{text-decoration:none;color:#343434;} #author_info a:visited{color:#4e4e4e;}
 
-
+/*setting for lazy.js*/
+.lazy {
+     display: none;
+ }
+/* black and white
+.widget a{text-decoration:none;color:#343434;} .widget a:visited{color:#4e4e4e;}
+.widget a:hover{color:#1a1a1a;}
+.widget a:focus{outline:thin dotted;color:#343434;}
+.widget a:hover,.widget a:active{outline:0;}
+ul li{list-style-type:square;}
+ol li{list-style-type:upper-roman;}
+.widget p>a,.widget li>a,footer a{text-decoration:none;border-bottom:1px dotted #b3b3b1;}
+.widget p>a:hover,.widget li>a:hover,footer a:hover{text-decoration:none;border-bottom:1px solid #b3b3b1;}*/

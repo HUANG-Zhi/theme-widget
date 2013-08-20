@@ -1,7 +1,6 @@
 <div class="page-header">
   <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
 </div>
-
     {{ content }}
     <div class="post_info">
       <span class="date item"><strong>Published: </strong><span style="padding:3px 6px;color:green">{{ page.date | date_to_long_string }}</span></span>
@@ -41,6 +40,4 @@
       </ul>
     </div>
     <hr>
-
     {% include JB/comments %}
-
